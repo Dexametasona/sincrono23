@@ -1,0 +1,13 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: grid;
+    grid-template: repeat(3, min-content)/1fr 3fr;
+    div:nth-child(5){
+        grid-column: span 2;
+    }
+}

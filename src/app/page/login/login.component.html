@@ -1,0 +1,20 @@
+<div>
+  <h1>Formulario de registro</h1>
+  <form class="form" (formGroup)="form">
+    <div>
+      <label for="name">Nombre:</label>
+    </div>
+    <div>
+      <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" formControlName="name" name="name">
+    </div>
+    <div>
+      <label for="pass">Password:</label>
+    </div>
+    <div>
+      <input type="password" id="pass" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" formControlName="pass" name="pass">
+    </div>
+    <div>
+      <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Login</button>
+    </div>
+  </form>
+</div>
