@@ -1,3 +1,4 @@
+import { PageModule } from './page/page.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,7 +16,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    PageModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
