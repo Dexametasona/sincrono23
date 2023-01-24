@@ -1,0 +1,27 @@
+<div class="bg-cyan-700 rounded-lg shadow p-4 text-slate-200 flex flex-col items-center">
+  <h1 class="text-4xl mb-8">Registrar usuario</h1>
+  <form class="form" (submit)="registrar()" [formGroup]="form">
+    <div>
+      <label for="email">Correo:</label>
+    </div>
+    <div>
+      <input type="email" name="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-2 border-trasparent focus:border-blue-500" formControlName="email" [ngClass]="form.get('email')?.untouched || form.get('email')?.valid ? styleValid:styleInvalid" (change)="limpiarMensaje()">
+    </div>
+    <div>
+      <label for="pass">Contraseña:</label>
+    </div>
+    <div>
+      <input type="password" name="pass" id="pass" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none border-2 border-trasparent focus:border-blue-500" formControlName="pass" [ngClass]="form.get('pass')?.untouched || form.get('pass')?.valid ? styleValid:styleInvalid" (change)="limpiarMensaje()">
+    </div>
+    <div class="flex justify-center mt-6">
+      <button class="bg-white hover:text-slate-200 text-gray-800 font-semibold py-2 px-4 rounded shadow" [disabled]="form.invalid" [ngClass]="boton.disabled? 'bg-slate-400':'bg-slate-200 hover:bg-cyan-500'" #boton>Login</button>
+    </div>
+  </form>
+  <div class="flex p-4 my-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800" role="alert" *ngIf="mensaje">
+    <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <span class="sr-only">Info</span>
+    <div>
+      <span class="font-medium">{{mensaje}}.</span>
+    </div>
+  </div>
+</div>

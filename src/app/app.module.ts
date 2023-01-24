@@ -17,7 +17,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    PageModule  
+    PageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

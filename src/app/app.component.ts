@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthguardService } from './service/authguard.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sincrono23';
+  constructor(private auth:AuthguardService){}
+  logout():void{
+    this.auth.logout().then(()=>console.log('sesión cerrada')).catch(err=>console.log('ocurrio un error: '+err))
+
+  }
 }
