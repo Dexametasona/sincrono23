@@ -1,2 +1,16 @@
+<div class="bg-slate-300 flex flex-col items-center rounded-lg text-xl text-slate-600 italic shadow-xl pt-3"
+*ngFor="let x of ListaProd">
+  <img class="rounded-md my-3" [src]="x.img">
+  <div class="box py-3 border-y-2 border-slate-200">
+    <p>Título:</p>
+    <p>{{x.title}}</p>
+    <p>Stock:</p>
+    <p>{{x.stock}}</p>
+    <p>Precio:</p>
+    <p>S{{x.price}}.00</p>
+  </div>
+  <div class="pt-3">
+    <button class="text-white bg-gradient-to-br from-yellow-500 to-yellow-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" (click)="borrar(x['id'])"> Eliminar</button>
+  </div>
+</div>
 
-<h1 class="text-8xl font-bold">Práctica de authguards</h1>

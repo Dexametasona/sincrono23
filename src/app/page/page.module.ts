@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { FormProductComponent } from './form-product/form-product.component';
 
 
 
@@ -11,7 +12,8 @@ import { RegisterComponent } from './register/register.component';
   declarations: [
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FormProductComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { RegisterComponent } from './register/register.component';
   exports: [
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FormProductComponent
   ]
 })
 export class PageModule { }

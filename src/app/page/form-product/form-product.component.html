@@ -1,0 +1,32 @@
+<div class="flex flex-col items-center text-white bg-blue-500 rounded-lg italic shadow-lg p-4">
+  <h2 class="text-4xl mb-6">Registro de productos</h2>
+  <form class="form" [formGroup]="form">
+    <div>
+      <label for="title">Nombre:</label>
+    </div>
+    <div>
+      <input type="text" name="title" id="title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" formControlName="title" [ngClass]="form.get('title')?.untouched || form.get('title')?.valid ? styleValid:styleInvalid" (change)="clearMensaje()">
+    </div>
+    <div>
+      <label for="stock">Cantidad:</label>
+    </div>
+    <div>
+      <input type="number" name="stock" id="stock" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" formControlName="stock" [ngClass]="form.get('stock')?.untouched || form.get('stock')?.valid ? styleValid:styleInvalid" (change)="clearMensaje()">
+    </div>
+    <div>
+      <label for="price">Precio:</label>
+    </div>
+    <div>
+      <input type="number" name="price" id="price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" formControlName="price" [ngClass]="form.get('price')?.untouched || form.get('price')?.valid ? styleValid:styleInvalid" (change)="clearMensaje()">
+    </div>
+    <div>
+      <label for="img">Imagen url:</label>
+    </div>
+    <div>
+      <input type="text" name="img" id="img" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" formControlName="img" [ngClass]="form.get('img')?.untouched || form.get('img')?.valid ? styleValid:styleInvalid" (change)="clearMensaje()" placeholder="Url de la imagen">
+    </div>
+    <div>
+      <button class=" font-semibold py-2 px-4 rounded shadow" [disabled]="form.invalid" [ngClass]="boton.disabled? 'bg-blue-100 text-slate-400':'bg-blue-300 text-white hover:bg-sky-300 hover:text-slate-100'" #boton (click)="registrar()">Registrar</button>
+    </div>
+</form>
+</div>
